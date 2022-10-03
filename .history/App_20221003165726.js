@@ -11,12 +11,10 @@ const App = () => {
   return (
     <TailwindProvider>
       <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{ headerShown: false }}
-          initialRouteName="Home"
-        >
-          <Stack.Screen name="Home" component={HomeScreen} />
-        </Stack.Navigator>
+        <Stack.Screen>
+          <Stack.Screen name={"Home"} component={HomeScreen} />
+        </Stack.Screen>
+        <View></View>
       </NavigationContainer>
     </TailwindProvider>
   );

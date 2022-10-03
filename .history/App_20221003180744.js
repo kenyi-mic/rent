@@ -10,14 +10,7 @@ const App = () => {
   const Stack = createNativeStackNavigator();
   return (
     <TailwindProvider>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{ headerShown: false }}
-          initialRouteName="Home"
-        >
-          <Stack.Screen name="Home" component={HomeScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <HomeScreen />
     </TailwindProvider>
   );
 };
