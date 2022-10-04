@@ -1,20 +1,12 @@
-import { View, Text, Image, Pressable } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
-import {
-  NavigationHelpersContext,
-  useNavigation,
-} from "@react-navigation/native";
 
 const RentCard = () => {
-  const navigation = useNavigation();
   return (
-    <Pressable
-      onPress={() => navigation.navigate("Details")}
-      className="items-center"
-    >
+    <View className="items-center">
       <View className="flex flex-row justify-evenly bg-white w-11/12  rounded-lg my-3 ">
         <Image
-          className="my-2 rounded-sm"
+          className="my-2"
           source={{
             width: 145,
             height: 120,
@@ -31,7 +23,7 @@ const RentCard = () => {
           </Text>
         </View>
       </View>
-    </Pressable>
+    </View>
   );
 };
 

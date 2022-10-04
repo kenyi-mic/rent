@@ -21,6 +21,9 @@ const HomeScreen = () => {
       <RentCard />
       <RentCard />
       <RentCard />
+      <RentCard />
+      <RentCard />
+      <RentCard />
     </SafeAreaView>
   );
 };

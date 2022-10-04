@@ -21,6 +21,9 @@ const HomeScreen = () => {
       <RentCard />
       <RentCard />
       <RentCard />
+      <RentCard />
+      <RentCard />
+      <RentCard />
     </SafeAreaView>
   );
 };
@@ -29,6 +32,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     height: height,
+    backgroundColor: "gray",
   },
   main: {
     width: width,

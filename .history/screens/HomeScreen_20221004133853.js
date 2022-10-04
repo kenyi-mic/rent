@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     height: height,
+    backgroundColor: "#D4F1F4",
   },
   main: {
     width: width,

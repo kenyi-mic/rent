@@ -11,13 +11,20 @@ import {
 } from "react-native";
 import React from "react";
 import RentCard from "../components/RentCard";
-
-import Header from "../components/Header";
+import { SparklesIcon } from "react-native-heroicons/solid";
 const { height, width } = Dimensions.get("window");
 const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <View>
+        <View>
+          <SparklesIcon />
+          <TextInput placeholder="Search for property" />
+        </View>
+      </View>
+      <RentCard />
+      <RentCard />
+      <RentCard />
       <RentCard />
       <RentCard />
       <RentCard />
