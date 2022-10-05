@@ -6,8 +6,9 @@ import {
   ClipboardIcon,
   HomeIcon,
   UserIcon,
-} from "react-native-heroicons/solid";
+} from "react-native-heroicons/outline";
 import HomeScreen from "../screens/HomeScreen";
+import DetailScreen from "../screens/DetailScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import ListingScreen from "../screens/ListingScreen";
 import ChatScreen from "../screens/ChatScreen";
@@ -20,7 +21,6 @@ const AppTab = () => {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: "dodgerblue",
-        tabBarStyle: { height: 60 },
         headerShown: false,
       }}
     >

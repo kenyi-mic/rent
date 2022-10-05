@@ -2,15 +2,14 @@ import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
-  ChatBubbleLeftRightIcon,
   ClipboardIcon,
   HomeIcon,
   UserIcon,
-} from "react-native-heroicons/solid";
+} from "react-native-heroicons/outline";
 import HomeScreen from "../screens/HomeScreen";
+import DetailScreen from "../screens/DetailScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import ListingScreen from "../screens/ListingScreen";
-import ChatScreen from "../screens/ChatScreen";
 
 const AppTab = () => {
   const Tab = createBottomTabNavigator();
@@ -20,7 +19,6 @@ const AppTab = () => {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: "dodgerblue",
-        tabBarStyle: { height: 60 },
         headerShown: false,
       }}
     >
@@ -45,12 +43,12 @@ const AppTab = () => {
         }}
       />
       <Tab.Screen
-        name="Chat"
-        component={ChatScreen}
+        name="Details"
+        component={DetailScreen}
         options={{
-          tabBarLabel: "Chat",
+          tabBarLabel: "Details",
           tabBarIcon: ({ color = "black" }) => (
-            <ChatBubbleLeftRightIcon color={color} size={30} />
+            <HomeIcon color={color} size={30} />
           ),
         }}
       />

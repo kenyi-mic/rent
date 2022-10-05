@@ -20,7 +20,6 @@ const AppTab = () => {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: "dodgerblue",
-        tabBarStyle: { height: 60 },
         headerShown: false,
       }}
     >
