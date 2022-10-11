@@ -1,13 +1,9 @@
 import {
-  View,
-  Text,
   SafeAreaView,
   StyleSheet,
   Platform,
   StatusBar,
   Dimensions,
-  Image,
-  TextInput,
 } from "react-native";
 import React from "react";
 import RentCard from "../components/RentCard";

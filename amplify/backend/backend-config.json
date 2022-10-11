@@ -1,29 +1,6 @@
 {
-  "api": {
-    "rent": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 30,
-              "description": "This is an api key"
-            }
-          },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "AWS_IAM"
-            }
-          ]
-        }
-      }
-    }
-  },
   "auth": {
-    "rent2fc27a8d": {
+    "rentb32c3eaf": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

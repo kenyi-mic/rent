@@ -19,7 +19,7 @@ const Appstack = () => {
         }}
         initialRouteName="Home"
       >
-        <Stack.Screen name="Home" component={AppTab} />
+        <Stack.Screen name="BottomTap" component={AppTab} />
         <Stack.Screen name="Details" component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
