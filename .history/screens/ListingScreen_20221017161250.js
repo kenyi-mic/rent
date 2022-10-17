@@ -24,7 +24,7 @@ const ListingScreen = () => {
       console.log(error);
       throw error;
     });
-
+  Auth.signOut();
   return (
     <SafeAreaView style={styles.container}>
       {/* upload images*/}

@@ -24,7 +24,6 @@ const ListingScreen = () => {
       console.log(error);
       throw error;
     });
-
   return (
     <SafeAreaView style={styles.container}>
       {/* upload images*/}
@@ -65,6 +64,8 @@ const ListingScreen = () => {
         <TextInput
           className=" text-lg p-2 bg-gray-50 "
           placeholder="Add Price"
+          type={number}
+          numberOfLines={4}
         />
       </View>
     </SafeAreaView>

@@ -4,12 +4,7 @@ import Appstack from "./Navigation/Appstack";
 import "react-native-gesture-handler";
 import { Amplify, Auth } from "aws-amplify";
 import awsconfig from "./src/aws-exports";
-Amplify.configure({
-  ...awsconfig,
-  analytics: {
-    disabled: true,
-  },
-});
+Amplify.configure(awsconfig);
 
 const App = () => {
   return (

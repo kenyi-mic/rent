@@ -24,7 +24,6 @@ const ListingScreen = () => {
       console.log(error);
       throw error;
     });
-
   return (
     <SafeAreaView style={styles.container}>
       {/* upload images*/}

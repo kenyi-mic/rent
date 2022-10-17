@@ -7,8 +7,6 @@ import {
   Platform,
   Pressable,
   TextInput,
-  TextBase,
-  TextInputBase,
 } from "react-native";
 import React from "react";
 import { withAuthenticator } from "aws-amplify-react-native";
@@ -24,7 +22,6 @@ const ListingScreen = () => {
       console.log(error);
       throw error;
     });
-
   return (
     <SafeAreaView style={styles.container}>
       {/* upload images*/}
@@ -41,32 +38,16 @@ const ListingScreen = () => {
         <Text className="text-lg font-semibold text-blue-800">Category</Text>
         <ChevronRightIcon size={24} color="darkblue" />
       </View>
-      {/* text input --> location*/}
-      <View className="w-5/4  bg-white my-4 mx-8 ">
+      {/* text input*/}
+      <View className="w-11/12 items-center relative">
         <TextInput
-          className=" text-lg p-2 bg-gray-50 "
+          className="w-full my-4 text-lg p-2 bg-gray-50 "
           placeholder="Add location"
         />
       </View>
-      {/* text input  --> title*/}
-      <View className="w-5/4  bg-white my-4 mx-8 ">
-        <TextInput className=" text-lg p-2 bg-gray-50 " placeholder="Title" />
-      </View>
-      {/* text input  --> description*/}
-      <View className="w-5/4  bg-white my-4 mx-8 ">
-        <TextInput
-          className=" text-lg p-2 bg-gray-50 "
-          placeholder="Add description"
-          numberOfLines={4}
-        />
-      </View>
-      {/* text input  --> description*/}
-      <View className="w-5/4  bg-white my-4 mx-8 ">
-        <TextInput
-          className=" text-lg p-2 bg-gray-50 "
-          placeholder="Add Price"
-        />
-      </View>
+      <Text>Title</Text>
+      <Text>Descriptions</Text>
+      <Text>Value</Text>
     </SafeAreaView>
   );
 };
