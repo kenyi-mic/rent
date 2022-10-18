@@ -19,7 +19,6 @@ import {
   MapPinIcon,
   PlusCircleIcon,
 } from "react-native-heroicons/solid";
-import { useNavigation } from "@react-navigation/native";
 
 const ListingScreen = () => {
   Auth.currentAuthenticatedUser()
@@ -31,7 +30,6 @@ const ListingScreen = () => {
       throw error;
     });
 
-  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       {/* upload images*/}
@@ -40,7 +38,7 @@ const ListingScreen = () => {
           Upload images [Max 5 photos]
         </Text>
         <Pressable
-          onPress={() => navigation.navigate("select photos")}
+          onPress={() => Navigation.navigate("select photos")}
           className="flex justify-center bg-white items-center h-32 w-32 border  border-dashed rounded-3xl"
         >
           <PlusCircleIcon size={40} color="black" />
