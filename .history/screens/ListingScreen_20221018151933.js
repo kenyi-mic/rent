@@ -13,12 +13,7 @@ import {
 import React from "react";
 import { withAuthenticator } from "aws-amplify-react-native";
 import { Auth } from "aws-amplify";
-import {
-  AdjustmentsVerticalIcon,
-  ChevronRightIcon,
-  MapPinIcon,
-  PlusCircleIcon,
-} from "react-native-heroicons/solid";
+import { ChevronRightIcon, PlusCircleIcon } from "react-native-heroicons/solid";
 
 const ListingScreen = () => {
   Auth.currentAuthenticatedUser()
@@ -43,18 +38,12 @@ const ListingScreen = () => {
       </View>
       {/*Categories*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center ">
-        <View className="flex flex-row items-center space-x-1">
-          <AdjustmentsVerticalIcon size={24} color="darkblue" />
-          <Text className="text-lg font-semibold text-blue-800">Category</Text>
-        </View>
+        <Text className="text-lg font-semibold text-blue-800">Category</Text>
         <ChevronRightIcon size={24} color="darkblue" />
       </View>
       {/*Location*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center mt-4 ">
-        <View className="flex flex-row items-center space-x-1">
-          <MapPinIcon size={24} color="darkblue" />
-          <Text className="text-lg font-semibold text-blue-800">Location</Text>
-        </View>
+        <Text className="text-lg font-semibold text-blue-800">Location</Text>
         <ChevronRightIcon size={24} color="darkblue" />
       </View>
 
@@ -63,7 +52,7 @@ const ListingScreen = () => {
         <TextInput className=" text-lg p-2 bg-gray-50 " placeholder="Title" />
       </View>
       {/* text input  --> description*/}
-      <View className="w-5/4  bg-white my-2 mx-8 ">
+      <View className="w-5/4  bg-white my-4 mx-8 ">
         <TextInput
           className=" text-lg p-2 bg-gray-50 "
           placeholder="Add description"

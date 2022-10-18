@@ -43,16 +43,16 @@ const ListingScreen = () => {
       </View>
       {/*Categories*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center ">
-        <View className="flex flex-row items-center space-x-1">
-          <AdjustmentsVerticalIcon size={24} color="darkblue" />
+        <View className="flex flex-row items-center space-x-2">
+          <AdjustmentsVerticalIcon size={24} color="black" />
           <Text className="text-lg font-semibold text-blue-800">Category</Text>
         </View>
         <ChevronRightIcon size={24} color="darkblue" />
       </View>
       {/*Location*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center mt-4 ">
-        <View className="flex flex-row items-center space-x-1">
-          <MapPinIcon size={24} color="darkblue" />
+        <View className="flex flex-row items-center space-x-2">
+          <MapPinIcon size={24} color="black" />
           <Text className="text-lg font-semibold text-blue-800">Location</Text>
         </View>
         <ChevronRightIcon size={24} color="darkblue" />

@@ -13,12 +13,7 @@ import {
 import React from "react";
 import { withAuthenticator } from "aws-amplify-react-native";
 import { Auth } from "aws-amplify";
-import {
-  AdjustmentsVerticalIcon,
-  ChevronRightIcon,
-  MapPinIcon,
-  PlusCircleIcon,
-} from "react-native-heroicons/solid";
+import { ChevronRightIcon, PlusCircleIcon } from "react-native-heroicons/solid";
 
 const ListingScreen = () => {
   Auth.currentAuthenticatedUser()
@@ -37,37 +32,32 @@ const ListingScreen = () => {
         <Text className="my-4 text-xl font-semibold">
           Upload images [Max 5 photos]
         </Text>
-        <Pressable className="flex justify-center bg-white items-center h-32 w-32 border  border-dashed rounded-3xl">
+        <Pressable className="flex justify-center bg-white items-center h-32 w-32 border-0  border-dashed rounded-3xl">
           <PlusCircleIcon size={40} color="black" />
         </Pressable>
       </View>
       {/*Categories*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center ">
-        <View className="flex flex-row items-center space-x-1">
-          <AdjustmentsVerticalIcon size={24} color="darkblue" />
-          <Text className="text-lg font-semibold text-blue-800">Category</Text>
-        </View>
+        <Text className="text-lg font-semibold text-blue-800">Category</Text>
         <ChevronRightIcon size={24} color="darkblue" />
       </View>
-      {/*Location*/}
-      <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center mt-4 ">
-        <View className="flex flex-row items-center space-x-1">
-          <MapPinIcon size={24} color="darkblue" />
-          <Text className="text-lg font-semibold text-blue-800">Location</Text>
-        </View>
-        <ChevronRightIcon size={24} color="darkblue" />
+      {/* text input --> location*/}
+      <View className="w-5/4  bg-white my-4 mx-8 ">
+        <TextInput
+          className=" text-lg p-2 bg-gray-50 "
+          placeholder="Add location"
+        />
       </View>
-
       {/* text input  --> title*/}
       <View className="w-5/4  bg-white my-4 mx-8 ">
         <TextInput className=" text-lg p-2 bg-gray-50 " placeholder="Title" />
       </View>
       {/* text input  --> description*/}
-      <View className="w-5/4  bg-white my-2 mx-8 ">
+      <View className="w-5/4  bg-white my-4 mx-8 ">
         <TextInput
           className=" text-lg p-2 bg-gray-50 "
           placeholder="Add description"
-          numberOfLines={2}
+          numberOfLines={4}
         />
       </View>
       {/* text input  --> description*/}

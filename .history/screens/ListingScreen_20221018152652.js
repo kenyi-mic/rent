@@ -43,7 +43,7 @@ const ListingScreen = () => {
       </View>
       {/*Categories*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center ">
-        <View className="flex flex-row items-center space-x-1">
+        <View className="flex flex-row items-center space-x-2">
           <AdjustmentsVerticalIcon size={24} color="darkblue" />
           <Text className="text-lg font-semibold text-blue-800">Category</Text>
         </View>
@@ -51,7 +51,7 @@ const ListingScreen = () => {
       </View>
       {/*Location*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center mt-4 ">
-        <View className="flex flex-row items-center space-x-1">
+        <View className="flex flex-row items-center space-x-2">
           <MapPinIcon size={24} color="darkblue" />
           <Text className="text-lg font-semibold text-blue-800">Location</Text>
         </View>
