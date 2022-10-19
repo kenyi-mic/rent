@@ -38,11 +38,9 @@ const ListingScreen = () => {
     console.log("There is no data in this route function!");
   } else {
     if (route.params.imageData) {
-      setImageData(() => route.params.imageData);
+      setImageData(route.params.imageData);
     }
   }
-
-  console.log(imageData);
 
   const navigation = useNavigation();
   return (

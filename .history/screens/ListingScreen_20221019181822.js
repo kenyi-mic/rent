@@ -42,8 +42,6 @@ const ListingScreen = () => {
     }
   }
 
-  console.log(imageData);
-
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>

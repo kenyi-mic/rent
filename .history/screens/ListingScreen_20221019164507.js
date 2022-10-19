@@ -10,7 +10,7 @@ import {
   TextBase,
   TextInputBase,
 } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import { withAuthenticator } from "aws-amplify-react-native";
 import { Auth } from "aws-amplify";
 import {
@@ -19,30 +19,17 @@ import {
   MapPinIcon,
   PlusCircleIcon,
 } from "react-native-heroicons/solid";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 const ListingScreen = () => {
-  const [imageData, setImageData] = useState([]);
-
   Auth.currentAuthenticatedUser()
     .then((user) => {
-      // tailwindcss
+      console.log("User id is: ", user?.attributes?.sub);
     })
     .catch((error) => {
       console.log(error);
       throw error;
     });
-
-  const route = useRoute();
-  if (!route.params) {
-    console.log("There is no data in this route function!");
-  } else {
-    if (route.params.imageData) {
-      setImageData(() => route.params.imageData);
-    }
-  }
-
-  console.log(imageData);
 
   const navigation = useNavigation();
   return (

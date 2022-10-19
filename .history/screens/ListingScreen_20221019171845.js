@@ -22,11 +22,9 @@ import {
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const ListingScreen = () => {
-  const [imageData, setImageData] = useState([]);
-
   Auth.currentAuthenticatedUser()
     .then((user) => {
-      // tailwindcss
+      console.log("User id is: ", user?.attributes?.sub);
     })
     .catch((error) => {
       console.log(error);
@@ -34,15 +32,8 @@ const ListingScreen = () => {
     });
 
   const route = useRoute();
-  if (!route.params) {
-    console.log("There is no data in this route function!");
-  } else {
-    if (route.params.imageData) {
-      setImageData(() => route.params.imageData);
-    }
-  }
 
-  console.log(imageData);
+  const [imageData, SetImageData] = useState();
 
   const navigation = useNavigation();
   return (

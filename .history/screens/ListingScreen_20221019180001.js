@@ -26,7 +26,7 @@ const ListingScreen = () => {
 
   Auth.currentAuthenticatedUser()
     .then((user) => {
-      // tailwindcss
+      console.log("User id is: ", user?.attributes?.sub);
     })
     .catch((error) => {
       console.log(error);
@@ -38,7 +38,7 @@ const ListingScreen = () => {
     console.log("There is no data in this route function!");
   } else {
     if (route.params.imageData) {
-      setImageData(() => route.params.imageData);
+      setImageData(route.params.imageData);
     }
   }
 
