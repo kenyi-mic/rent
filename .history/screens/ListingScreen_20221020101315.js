@@ -9,12 +9,10 @@ import {
   TextInput,
   TextBase,
   TextInputBase,
-  Image,
-  ScrollView,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { withAuthenticator } from "aws-amplify-react-native";
-import { Auth } from "aws-amplify";
+import Auth from "@aws-amplify/auth";
 import {
   AdjustmentsVerticalIcon,
   ChevronRightIcon,
@@ -36,16 +34,13 @@ const ListingScreen = () => {
     });
 
   const route = useRoute();
-
-  useEffect(() => {
-    if (!route.params) {
-      console.log("There is no data in this route function!");
-    } else {
-      if (route.params.imageData) {
-        setImageData(route.params.imageData);
-      }
+  if (!route.params) {
+    console.log("There is no data in this route function!");
+  } else {
+    if (route.params.imageData) {
+      setImageData(() => route.params.imageData);
     }
-  });
+  }
 
   console.log(imageData);
 
@@ -63,17 +58,6 @@ const ListingScreen = () => {
         >
           <PlusCircleIcon size={40} color="black" />
         </Pressable>
-        <ScrollView horizontal>
-          {imageData &&
-            imageData.map((item) => (
-              <View key={item.id}>
-                <Image
-                  className="w-20 mx-2 my-4 h-32"
-                  source={{ uri: item.uri }}
-                />
-              </View>
-            ))}
-        </ScrollView>
       </View>
       {/*Categories*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center ">

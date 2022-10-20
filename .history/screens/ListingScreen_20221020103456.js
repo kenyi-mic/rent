@@ -68,7 +68,7 @@ const ListingScreen = () => {
             imageData.map((item) => (
               <View key={item.id}>
                 <Image
-                  className="w-20 mx-2 my-4 h-32"
+                  className="w-20 mx-2 my-4 h-40"
                   source={{ uri: item.uri }}
                 />
               </View>

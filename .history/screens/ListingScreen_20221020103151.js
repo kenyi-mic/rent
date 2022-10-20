@@ -45,7 +45,7 @@ const ListingScreen = () => {
         setImageData(route.params.imageData);
       }
     }
-  });
+  }, []);
 
   console.log(imageData);
 
@@ -67,10 +67,7 @@ const ListingScreen = () => {
           {imageData &&
             imageData.map((item) => (
               <View key={item.id}>
-                <Image
-                  className="w-20 mx-2 my-4 h-32"
-                  source={{ uri: item.uri }}
-                />
+                <Image className="w-40 h-40" source={{ uri: item.image }} />
               </View>
             ))}
         </ScrollView>
