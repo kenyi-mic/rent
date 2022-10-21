@@ -77,16 +77,13 @@ const ListingScreen = () => {
         </ScrollView>
       </View>
       {/*Categories*/}
-      <TouchableOpacity
-        onPress={() => navigation.navigate("category")}
-        className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center "
-      >
-        <View className="flex flex-row items-center space-x-1">
+      <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center ">
+        <TouchableOpacity className="flex flex-row items-center space-x-1">
           <AdjustmentsVerticalIcon size={24} color="darkblue" />
           <Text className="text-lg font-semibold text-blue-800">Category</Text>
-        </View>
+        </TouchableOpacity>
         <ChevronRightIcon size={24} color="darkblue" />
-      </TouchableOpacity>
+      </View>
       {/*Location*/}
       <View className="flex flex-row space-x-1 mx-8 justify-between bg-white p-2 rounded-lg items-center mt-4 ">
         <View className="flex flex-row items-center space-x-1">
