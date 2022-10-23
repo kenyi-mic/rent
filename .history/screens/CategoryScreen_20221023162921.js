@@ -5,13 +5,11 @@ import {
   StatusBar,
   Platform,
   StyleSheet,
-  Pressable,
 } from "react-native";
-import React, { useState } from "react";
-import { Entypo, Ionicons, MaterialIcons, AntDesign } from "@expo/vector-icons";
+import React from "react";
 
 const CategoryScreen = () => {
-  const [categories, setCategories] = useState({
+  const [] = useState({
     names: [
       {
         id: 0,
@@ -68,24 +66,7 @@ const CategoryScreen = () => {
   });
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        {categories.names.map((item) => {
-          <Pressable
-            key={item.id}
-            onPress={() =>
-              navigation.navigate("Listing", {
-                id: item.id,
-                name: item.name,
-              })
-            }
-          >
-            <View>
-              <Text>{item?.fullIcon}</Text>
-              <Text>{item?.name}</Text>
-            </View>
-          </Pressable>;
-        })}
-      </View>
+      <Text>CategoryScreen</Text>
     </SafeAreaView>
   );
 };

@@ -79,10 +79,8 @@ const CategoryScreen = () => {
               })
             }
           >
-            <View>
-              <Text>{item?.fullIcon}</Text>
-              <Text>{item?.name}</Text>
-            </View>
+            <Text>{item?.fullIcon}</Text>
+            <Text>{item?.name}</Text>
           </Pressable>;
         })}
       </View>
