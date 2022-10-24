@@ -68,10 +68,24 @@ const CategoryScreen = () => {
   });
   return (
     <SafeAreaView style={styles.container}>
-      <View className="pl-4">
-        <Text className="text-xl  font-bold text-gray-800">
-          Choose a Category
-        </Text>
+      <View>
+        <Text>Choose a Category</Text>
+        {categories.names.map((item) => {
+          <Pressable
+            key={item.id}
+            onPress={() =>
+              navigation.navigate("Listing", {
+                id: item.id,
+                name: item.name,
+              })
+            }
+          >
+            <View>
+              <Text>{item?.fullIcon}</Text>
+              <Text>{item?.name}</Text>
+            </View>
+          </Pressable>;
+        })}
       </View>
     </SafeAreaView>
   );

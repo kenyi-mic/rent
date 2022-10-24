@@ -72,6 +72,7 @@ const CategoryScreen = () => {
         <Text className="text-xl  font-bold text-gray-800">
           Choose a Category
         </Text>
+        {categories.names.map((item) => {})}
       </View>
     </SafeAreaView>
   );

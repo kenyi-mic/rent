@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { Entypo, Ionicons, MaterialIcons, AntDesign } from "@expo/vector-icons";
+import CategoryComponent from "../components/CategoryComponent";
 
 const CategoryScreen = () => {
   const [categories, setCategories] = useState({
@@ -72,6 +73,9 @@ const CategoryScreen = () => {
         <Text className="text-xl  font-bold text-gray-800">
           Choose a Category
         </Text>
+        {categories.names.map((item) => {
+          <CategoryComponent />;
+        })}
       </View>
     </SafeAreaView>
   );
