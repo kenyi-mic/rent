@@ -7,16 +7,16 @@ import {
   StyleSheet,
 } from "react-native";
 import React from "react";
-import Category from "../components/Category";
+import Location from "../components/Location";
 
-const CategoryScreen = () => {
+const LocationScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View className="">
         <Text className="text-xl  font-bold text-gray-800 pl-4 my-4">
-          Choose a Category
+          Choose a Location(City)
         </Text>
-        <Category />
+        <Location />
       </View>
     </SafeAreaView>
   );
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
-export default CategoryScreen;
+export default LocationScreen;

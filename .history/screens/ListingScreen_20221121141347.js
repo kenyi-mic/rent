@@ -7,8 +7,11 @@ import {
   Platform,
   Pressable,
   TextInput,
+  TextBase,
+  TextInputBase,
   Image,
   ScrollView,
+  TouchableOpacity,
   Button,
 } from "react-native";
 import React, { useEffect, useState } from "react";
@@ -17,13 +20,13 @@ import { Auth } from "aws-amplify";
 import {
   AdjustmentsVerticalIcon,
   ChevronRightIcon,
+  ClipboardIcon,
   CurrencyDollarIcon,
   DocumentTextIcon,
   MapPinIcon,
   PlusCircleIcon,
 } from "react-native-heroicons/solid";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { MaterialIcons } from "@expo/vector-icons";
 
 const ListingScreen = () => {
   const [imageData, setImageData] = useState([]);
@@ -85,7 +88,6 @@ const ListingScreen = () => {
               ))}
           </ScrollView>
         </View>
-
         {/*Categories*/}
         <Pressable
           android_ripple={{ color: "gray" }}
@@ -116,41 +118,33 @@ const ListingScreen = () => {
         </Pressable>
 
         {/* text input  --> title*/}
-        <View className="flex flex-row space-x-2 justify-start items-center px-2 w-5/4  bg-white my-4 mx-8 ">
-          <MaterialIcons
-            style={styles.catIcon}
-            name="title"
-            size={24}
-            color="darkblue"
-          />
+        <View className="flex flex-row space-x-2 items-center px-2 w-5/4  bg-white my-4 mx-8 ">
           <TextInput
-            className=" text-lg p-2 bg-gray-50 w-full"
+            className=" text-lg p-2 bg-gray-50 "
             placeholder="Title"
             value={title}
-            onChangeText={(e) => setTitle(e)}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </View>
         {/* text input  --> description*/}
-        <View className="flex flex-row space-x-2 items-center justify-start px-2 w-5/4  bg-white my-2 mx-8 ">
+        <View className="flex flex-row space-x-2 items-center px-2 w-5/4  bg-white my-2 mx-8 ">
           <DocumentTextIcon color="darkblue" size={24} />
           <TextInput
-            className=" text-lg p-2 bg-gray-50 w-full"
+            className=" text-lg p-2 bg-gray-50 "
             placeholder="Add description"
             numberOfLines={2}
             value={description}
-            onChangeText={(e) => setDescription(e)}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </View>
         {/* text input  --> description*/}
-        <View className="flex flex-row space-x-2 items-center px-2 w-1/2 justify-start  bg-white my-4 mx-8 ">
+        <View className="flex flex-row space-x-2 items-center px-2 w-1/2  bg-white my-4 mx-8 ">
           <CurrencyDollarIcon size={24} color="darkblue" />
           <TextInput
             className=" text-lg p-2 bg-gray-50 "
             placeholder="Add Price"
             value={rentPrice}
-            keyboardType={numeric}
-            multiline={true}
-            onChangeText={(e) => setPrice(e)}
+            onChange={(e) => setPrice(e.target.value)}
           />
         </View>
         <View className="m-8 bg-blue-500 rounded elevated shadow-xl">

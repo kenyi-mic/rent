@@ -23,7 +23,7 @@ import {
   PlusCircleIcon,
 } from "react-native-heroicons/solid";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome, AntDesign } from "@expo/vector-icons";
 
 const ListingScreen = () => {
   const [imageData, setImageData] = useState([]);
@@ -85,7 +85,6 @@ const ListingScreen = () => {
               ))}
           </ScrollView>
         </View>
-
         {/*Categories*/}
         <Pressable
           android_ripple={{ color: "gray" }}
@@ -117,9 +116,9 @@ const ListingScreen = () => {
 
         {/* text input  --> title*/}
         <View className="flex flex-row space-x-2 justify-start items-center px-2 w-5/4  bg-white my-4 mx-8 ">
-          <MaterialIcons
+          <FontAwesome
             style={styles.catIcon}
-            name="title"
+            name="text-size"
             size={24}
             color="darkblue"
           />
@@ -127,7 +126,7 @@ const ListingScreen = () => {
             className=" text-lg p-2 bg-gray-50 w-full"
             placeholder="Title"
             value={title}
-            onChangeText={(e) => setTitle(e)}
+            onChangeText={(e) => setTitle(e.target.value)}
           />
         </View>
         {/* text input  --> description*/}
@@ -138,7 +137,7 @@ const ListingScreen = () => {
             placeholder="Add description"
             numberOfLines={2}
             value={description}
-            onChangeText={(e) => setDescription(e)}
+            onChangeText={(e) => setDescription(e.target.value)}
           />
         </View>
         {/* text input  --> description*/}
@@ -148,9 +147,7 @@ const ListingScreen = () => {
             className=" text-lg p-2 bg-gray-50 "
             placeholder="Add Price"
             value={rentPrice}
-            keyboardType={numeric}
-            multiline={true}
-            onChangeText={(e) => setPrice(e)}
+            onChangeText={(e) => setPrice(e.target.value)}
           />
         </View>
         <View className="m-8 bg-blue-500 rounded elevated shadow-xl">

@@ -7,13 +7,12 @@ import {
   StyleSheet,
 } from "react-native";
 import React from "react";
-import Category from "../components/Category";
 
 const CategoryScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View className="">
-        <Text className="text-xl  font-bold text-gray-800 pl-4 my-4">
+      <View className="pl-4">
+        <Text className="text-xl  font-bold text-gray-800">
           Choose a Category
         </Text>
         <Category />

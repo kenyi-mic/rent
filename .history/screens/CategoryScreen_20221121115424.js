@@ -13,7 +13,7 @@ const CategoryScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View className="">
-        <Text className="text-xl  font-bold text-gray-800 pl-4 my-4">
+        <Text className="text-xl  font-bold text-gray-800 pl-4">
           Choose a Category
         </Text>
         <Category />

@@ -85,7 +85,6 @@ const ListingScreen = () => {
               ))}
           </ScrollView>
         </View>
-
         {/*Categories*/}
         <Pressable
           android_ripple={{ color: "gray" }}
@@ -148,8 +147,6 @@ const ListingScreen = () => {
             className=" text-lg p-2 bg-gray-50 "
             placeholder="Add Price"
             value={rentPrice}
-            keyboardType={numeric}
-            multiline={true}
             onChangeText={(e) => setPrice(e)}
           />
         </View>
