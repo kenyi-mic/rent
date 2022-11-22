@@ -11,11 +11,6 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        "server": {
-            "RootUrl": "string",
-            "ApiName": "string",
-            "ApiId": "string"
-        },
         "rent": {
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"

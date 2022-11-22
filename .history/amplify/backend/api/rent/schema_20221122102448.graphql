@@ -7,7 +7,7 @@ type Listing
       { allow: private, provider: userPools }
     ]
   ) {
-  id: ID
+  id: ID!
   title: String!
   category: String
   categoryID: String
@@ -15,7 +15,7 @@ type Listing
   images: String
   locationID: String
   locationName: String
-  userID: ID
+  userID: ID!
   commonID: String
     @index(
       name: "listingByCreatedAt"
